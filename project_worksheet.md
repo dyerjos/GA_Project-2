@@ -9,9 +9,16 @@ This app generate random cards. Each card will have a random image of a goat, a 
 
 ## Wireframes
 
-<INSERT WHITEBOARD PHOTOS HERE>
+React component hierarchy rough-draft:
+![component hierarchy](https://res.cloudinary.com/dldktffdd/image/upload/v1566588654/proj%202/project%20worksheet/wireframing/IMG_1844_iq7xpk.heic)
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
+Page rough-drafts:
+![pages](https://res.cloudinary.com/dldktffdd/image/upload/v1566588654/proj%202/project%20worksheet/wireframing/IMG_2815_qztb5i.heic)
+
+![pages](https://res.cloudinary.com/dldktffdd/image/upload/v1566588654/proj%202/project%20worksheet/wireframing/IMG_3780_tzplb3.heic)
+
+Whiteboarding
+![app pages](https://res.cloudinary.com/dldktffdd/image/upload/v1566588437/proj%202/project%20worksheet/wireframing/IMG_5102_znkbth.heic)
 
 ## API
 
@@ -71,6 +78,8 @@ Namefake API: https://uinames.com/api/?gender=male
 
 ## React Component Hierarchy
 
+![component hierarchy](https://res.cloudinary.com/dldktffdd/image/upload/v1566588437/proj%202/project%20worksheet/wireframing/IMG_7281_tnh6xi.heic)
+
 ## Components
 ##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
 
@@ -93,7 +102,7 @@ Namefake API: https://uinames.com/api/?gender=male
 
 
 | Component | Priority | Estimated Time | Actual Time |
-| --- | :---: |  :---: | :---: | :---: |
+| --- | :---: |  :---: | :---: |
 | App | H | 3hrs| #hrs |
 | Header | H | 2hrs| #hrs |
 | Footer | H | 1hrs| #hrs |
