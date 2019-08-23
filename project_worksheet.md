@@ -91,13 +91,29 @@ Namefake API: https://uinames.com/api/?gender=male
 | Main | This will render the header include the nav |
 | Section | This will render sections of a page |
 
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
-| Component | Priority | Estimated Time | Time Invetsted | Actual Time |
+| Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| App | H | 3hrs| #hrs |
+| Header | H | 2hrs| #hrs |
+| Footer | H | 1hrs| #hrs |
+| Favorites Page | H | 4hrs| #hrs |
+| About Page | H | 2hrs| #hrs |
+| Jokes Page | H | 6hrs| #hrs |
+| Card | H | 4hrs| #hrs |
+| Image | H | 2hrs| #hrs |
+| Quotes | H | 2hrs| #hrs |
+| Name | H | 1hrs| #hrs |
+| Inspirational Page | H | 3hrs| #hrs |
+| Main | H | 2hrs| #hrs |
+| Section | H | 1hrs| #hrs |
+| ImageType | M | 3hrs| #hrs |
+| ImageType | M | 3hrs| #hrs |
+| JokeType | M | 3hrs| #hrs |
+| SoundEffect | L | 2hrs| #hrs |
+| Share | L | 2hrs| #hrs |
+
+| Total | -- | 25hrs| #hrs |
 
 ## Additional Libraries
  Axios - for the api call
