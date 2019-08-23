@@ -31,7 +31,7 @@ Namefake API: https://uinames.com/api/?gender=male
 ![random male names](https://res.cloudinary.com/dldktffdd/image/upload/v1566584878/proj%202/project%20worksheet/api%20screenshots/Screen_Shot_2019-08-23_at_2.27.23_PM_tbjizd.png)
 
 
-### MVP/PostMVP - 5min
+### MVP/PostMVP
 
 #### MVP
 - Be a working, interactive, React application.
