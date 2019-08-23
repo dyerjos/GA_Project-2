@@ -7,11 +7,15 @@ Use this section to describe your final project and perhaps any links to relevan
 
 ## Wireframes
 
+<INSERT WHITEBOARD PHOTOS HERE>
+
 Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe.
 
 ## API
 
-Provide a description and link to the API you have chosen for your project.
+This app will initially require a few different api's.
+
+![dad jokes api](https://res.cloudinary.com/dldktffdd/image/upload/v1566584374/proj%202/project%20worksheet/api%20screenshots/Screen_Shot_2019-08-23_at_2.18.56_PM_kgd2i3.png)
 
 Provide a small code sample of the returned data that you will use to build your app.
 
