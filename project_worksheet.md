@@ -1,4 +1,3 @@
-![goat gif for panda prize](https://media3.giphy.com/media/Q6lrzliWvxS6c/source.gif)
 
 # Project Overview
 
@@ -34,29 +33,10 @@ Namefake API: https://uinames.com/api/?gender=male
 ### MVP/PostMVP
 
 #### MVP
-- Be a working, interactive, React application.
 
-- Include data from a third-party API.
+- Have a Jokes page that generates cards pairing goats with jokes
 
-- Pull data into the application using an API
-
-- Use React Router installed using npm.
-
-- Have at least 6 separate components, using a readable file structure.
-
-- Be built using Create React App.
-
-- Be styled with CSS.
-
-- Use Flexbox or CSS Grid for layouts.
-
-- Use functional components and class components appropriately.
-
-- Be deployed via GitHub and Surge.
-
-- Have jokes page that generates cards pairing goats with jokes
-
-- Have inspirational page that generates cards pairing goats with inspirational quotes
+- Have an Inspiration page that generates cards pairing goats with inspirational quotes
 
 - Have an About page that will introduce myself
 
@@ -81,8 +61,6 @@ Namefake API: https://uinames.com/api/?gender=male
 ![component hierarchy](https://res.cloudinary.com/dldktffdd/image/upload/v1566589248/proj%202/project%20worksheet/wireframing/Image_from_iOS_4_axlvc7.jpg)
 
 ## Components
-##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
-
 
 | Component | Description |
 | --- | :---: |  
@@ -121,8 +99,7 @@ Namefake API: https://uinames.com/api/?gender=male
 | JokeType | M | 3hrs| #hrs |
 | SoundEffect | L | 2hrs| #hrs |
 | Share | L | 2hrs| #hrs |
-
-| Total | -- | 25hrs| #hrs |
+| Total | -- | 35hrs| #hrs |
 
 ## Additional Libraries
  Axios - for the api call
