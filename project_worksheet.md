@@ -10,15 +10,15 @@ This app generate random cards. Each card will have a random image of a goat, a 
 ## Wireframes
 
 React component hierarchy rough-draft:
-![component hierarchy](https://res.cloudinary.com/dldktffdd/image/upload/v1566588654/proj%202/project%20worksheet/wireframing/IMG_1844_iq7xpk.heic)
+![component hierarchy](https://res.cloudinary.com/dldktffdd/image/upload/v1566589248/proj%202/project%20worksheet/wireframing/Image_from_iOS_2_sktsxn.jpg)
 
 Page rough-drafts:
-![pages](https://res.cloudinary.com/dldktffdd/image/upload/v1566588654/proj%202/project%20worksheet/wireframing/IMG_2815_qztb5i.heic)
+![pages](https://res.cloudinary.com/dldktffdd/image/upload/v1566589248/proj%202/project%20worksheet/wireframing/Image_from_iOS_1_owdoer.jpg)
 
-![pages](https://res.cloudinary.com/dldktffdd/image/upload/v1566588654/proj%202/project%20worksheet/wireframing/IMG_3780_tzplb3.heic)
+![pages](https://res.cloudinary.com/dldktffdd/image/upload/v1566589248/proj%202/project%20worksheet/wireframing/Image_from_iOS_x7g7of.jpg)
 
 Whiteboarding
-![app pages](https://res.cloudinary.com/dldktffdd/image/upload/v1566588437/proj%202/project%20worksheet/wireframing/IMG_5102_znkbth.heic)
+![app pages](https://res.cloudinary.com/dldktffdd/image/upload/v1566589248/proj%202/project%20worksheet/wireframing/Image_from_iOS_3_rlbxej.jpg)
 
 ## API
 
@@ -78,7 +78,7 @@ Namefake API: https://uinames.com/api/?gender=male
 
 ## React Component Hierarchy
 
-![component hierarchy](https://res.cloudinary.com/dldktffdd/image/upload/v1566588437/proj%202/project%20worksheet/wireframing/IMG_7281_tnh6xi.heic)
+![component hierarchy](https://res.cloudinary.com/dldktffdd/image/upload/v1566589248/proj%202/project%20worksheet/wireframing/Image_from_iOS_4_axlvc7.jpg)
 
 ## Components
 ##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
