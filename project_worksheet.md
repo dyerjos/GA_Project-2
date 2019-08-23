@@ -1,9 +1,11 @@
+![goat gif for panda prize](https://media3.giphy.com/media/Q6lrzliWvxS6c/source.gif)
+
 # Project Overview
 
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+This app generate random cards. Each card will have a random image of a goat, a random dad joke, and a random male name assigned to each goat. It will have a means to favorite goats and possibly will have a feature to download the generated cards as jpeg files, time permitting. The purpose of this app is to help people have a good laugh.
 
 ## Wireframes
 
@@ -13,40 +15,81 @@ Upload images of wireframe to cloudinary and add the link here with a descriptio
 
 ## API
 
-This app will initially require a few different api's.
+Current API's being used
 
-![dad jokes api](https://res.cloudinary.com/dldktffdd/image/upload/v1566584374/proj%202/project%20worksheet/api%20screenshots/Screen_Shot_2019-08-23_at_2.18.56_PM_kgd2i3.png)
+icanhazdadjoke API: https://icanhazdadjoke.com/api
+![dad jokes](https://res.cloudinary.com/dldktffdd/image/upload/v1566584374/proj%202/project%20worksheet/api%20screenshots/Screen_Shot_2019-08-23_at_2.18.56_PM_kgd2i3.png)
 
-Provide a small code sample of the returned data that you will use to build your app.
+Namefake API: https://uinames.com/api/?gender=male
+![random male names](https://res.cloudinary.com/dldktffdd/image/upload/v1566584878/proj%202/project%20worksheet/api%20screenshots/Screen_Shot_2019-08-23_at_2.27.23_PM_tbjizd.png)
+
 
 ### MVP/PostMVP - 5min
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+#### MVP
+- Be a working, interactive, React application.
 
-#### MVP EXAMPLE
-- Find and use external api
-- Render data on page
-- Allow user to interact with the page
+- Include data from a third-party API.
 
-#### PostMVP EXAMPLE
+- Pull data into the application using an API
 
-- Add localStorage or firebase for storage
+- Use React Router installed using npm.
+
+- Have at least 6 separate components, using a readable file structure.
+
+- Be built using Create React App.
+
+- Be styled with CSS.
+
+- Use Flexbox or CSS Grid for layouts.
+
+- Use functional components and class components appropriately.
+
+- Be deployed via GitHub and Surge.
+
+- Have jokes page that generates cards pairing goats with jokes
+
+- Have inspirational page that generates cards pairing goats with inspirational quotes
+
+- Have an About page that will introduce myself
+
+- Have a Home page that will introduce the app
+
+- Have a Favorites page that will hold a user's favorited cards
+
+
+#### PostMVP (time permitting)
+
+- Provide choice between goats, dogs, and cats for card generation
+
+- Provide choice of joke type (chuck Norris jokes, general jokes, ect)
+
+- Add sound effects like a goat scream to certain button clicks
+
+- Add way to download or share generated cards to computer or friends
+
 
 ## React Component Hierarchy
-
-Define the the React components and the architectural design of your app.
 
 ## Components
 ##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
 
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components.
 
 | Component | Description |
 | --- | :---: |  
-| App | This will make the initial data pull and include React Router|
+| App | This will be parent to Header, Footer, Card, and Main components. It will serve as the Router|
 | Header | This will render the header include the nav |
-| Footer | This will render the header include the nav |
-
+| Footer | This will render the footer |
+| Favorites Page | This will render the favorites page which includes favorited cards|
+| About Page | This will render the about page |
+| Jokes Page | This will render Jokes page |
+| Card | This will render the randomly generated cards |
+| Image | This will render the animal image |
+| Quotes | This will render the joke or quote text for the card |
+| Name | This will render the random male name for the card |
+| Inspiration Page | This will render the main landing page that will then route all other pages |
+| Main | This will render the header include the nav |
+| Section | This will render sections of a page |
 
 Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
@@ -57,7 +100,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Total | H | 6hrs| 5hrs | 5hrs |
 
 ## Additional Libraries
- Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc.
+ Axios - for the api call
 
 ## Code Snippet
 
