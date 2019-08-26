@@ -1,26 +1,57 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import axios from 'axios';
+import Main from './components/Main'
+import Header from './components/Header'
+import Footer from './components/Footer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const headers = {
+  'Accept': 'application/json'
+}
+
+class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      jokes: '',
+      id: ''
+    }
+  }
+
+
+  getAllDadJokes = async () => {
+    fetch('https://icanhazdadjoke.com/', {
+      headers: {
+        'Accept': 'application/json'
+      }
+      })
+      .then(res => res.json())
+      .then(data => this.setState(prevState => ({
+      jokes: data.joke,
+      id: data.id
+      })
+    ))
+
+  }
+
+  componentDidMount() {
+    this.getAllDadJokes()
+  }
+
+
+  render() {
+    console.log('this is the jokes state in app.js', this.state.jokes)
+    return (
+      <div className="App">
+        <h1>Dad Goats</h1>
+        <Header />
+        <Main
+          jokes= {this.state.jokes}
+          id= {this.state.id}
+        />
+        <Footer />
+      </div>
+    );
+  }
 }
 
 export default App;
