@@ -81,6 +81,8 @@ Namefake API: https://uinames.com/api/?gender=male
 
 | Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
+| Design | H | 8hrs| 8hrs |
+| Startup Code | H | 3hrs| 3hrs |
 | App | H | 3hrs| #hrs |
 | Header | H | 2hrs| #hrs |
 | Footer | H | 1hrs| #hrs |

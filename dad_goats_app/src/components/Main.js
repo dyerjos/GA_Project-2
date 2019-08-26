@@ -14,7 +14,11 @@ console.log('this is the jokes prop in Main', props.jokes)
     <main>
       <Switch>
         <Route exact path='/' component={Home} />
-        <Route path='/Jokes' component={Jokes} />
+        <Route path='/Jokes'
+        render={() => <
+          Jokes {...props}
+          />}
+        />
         <Route path='/Inspiration' component={Inspiration} />
         <Route path='/About' component={About} />
         <Route path='/Favorites' component={Favorites} />
