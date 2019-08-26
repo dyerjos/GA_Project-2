@@ -9,6 +9,7 @@ import Home from './Home'
 
 function Main(props) {
 console.log('this is the jokes prop in Main', props.jokes)
+console.log('this is the name1 in main', props.name1)
   return (
 
     <main>
