@@ -24,10 +24,10 @@ Whiteboarding
 Current API's being used
 
 icanhazdadjoke API: https://icanhazdadjoke.com/api
-![dad jokes](https://res.cloudinary.com/dldktffdd/image/upload/v1566584374/proj%202/project%20worksheet/api%20screenshots/Screen_Shot_2019-08-23_at_2.18.56_PM_kgd2i3.png)
+![dad jokes](https://res.cloudinary.com/dldktffdd/image/upload/v1566913736/proj%202/project%20worksheet/api%20screenshots/Screen_Shot_2019-08-27_at_9.47.43_AM_xh1ozi.png)
 
-Namefake API: https://uinames.com/api/?gender=male
-![random male names](https://res.cloudinary.com/dldktffdd/image/upload/v1566584878/proj%202/project%20worksheet/api%20screenshots/Screen_Shot_2019-08-23_at_2.27.23_PM_tbjizd.png)
+Namefake API: https://randomuser.me/api/?gender=male&nat=us
+![random male names](https://res.cloudinary.com/dldktffdd/image/upload/v1566913731/proj%202/project%20worksheet/api%20screenshots/Screen_Shot_2019-08-27_at_9.39.45_AM_zpqpvl.png)
 
 
 ### MVP/PostMVP
@@ -58,7 +58,7 @@ Namefake API: https://uinames.com/api/?gender=male
 
 ## React Component Hierarchy
 
-![component hierarchy](https://res.cloudinary.com/dldktffdd/image/upload/v1566589248/proj%202/project%20worksheet/wireframing/Image_from_iOS_4_axlvc7.jpg)
+![component hierarchy](https://res.cloudinary.com/dldktffdd/image/upload/v1566914187/proj%202/project%20worksheet/wireframing/Image_from_iOS_4_trd2rt.jpg)
 
 ## Components
 
@@ -71,37 +71,37 @@ Namefake API: https://uinames.com/api/?gender=male
 | About Page | This will render the about page |
 | Jokes Page | This will render Jokes page |
 | Card | This will render the randomly generated cards |
-| Image | This will render the animal image |
-| Quotes | This will render the joke or quote text for the card |
-| Name | This will render the random male name for the card |
+| Image (Not Needed?)| This will render the animal image |
+| Quotes (Not Needed?)| This will render the joke or quote text for the card |
+| Name (Not Needed?)| This will render the random male name for the card |
 | Inspiration Page | This will render the main landing page that will then route all other pages |
 | Main | This will render the header include the nav |
 | Section | This will render sections of a page |
 
 
-| Component | Priority | Estimated Time | Actual Time |
+| Component | Priority | Estimated Time | Time so far |
 | --- | :---: |  :---: | :---: |
 | Design | H | 8hrs| 8hrs |
 | Startup Code | H | 3hrs| 3hrs |
-| App | H | 3hrs| #hrs |
-| Header | H | 2hrs| #hrs |
-| Footer | H | 1hrs| #hrs |
-| Favorites Page | H | 4hrs| #hrs |
-| About Page | H | 2hrs| #hrs |
-| Jokes Page | H | 6hrs| #hrs |
-| Card | H | 4hrs| #hrs |
-| Image | H | 2hrs| #hrs |
-| Quotes | H | 2hrs| #hrs |
-| Name | H | 1hrs| #hrs |
-| Inspirational Page | H | 3hrs| #hrs |
-| Main | H | 2hrs| #hrs |
-| Section | H | 1hrs| #hrs |
-| ImageType | M | 3hrs| #hrs |
-| ImageType | M | 3hrs| #hrs |
-| JokeType | M | 3hrs| #hrs |
-| SoundEffect | L | 2hrs| #hrs |
-| Share | L | 2hrs| #hrs |
-| Total | -- | 35hrs| #hrs |
+| App | H | 3hrs| 3.5hrs |
+| Header | H | 2hrs| 0.25hrs |
+| Footer | H | 1hrs| 0hrs |
+| Favorites Page | H | 4hrs| 0hrs |
+| About Page | H | 2hrs| 0hrs |
+| Jokes Page | H | 6hrs| 0.5hrs |
+| Card | H | 4hrs| 2.75hrs |
+| Image (Not Needed?)| H | 2hrs| 0hrs |
+| Quotes (Not Needed?)| H | 2hrs| 0hrs |
+| Name (Not Needed?)| H | 1hrs| 0hrs |
+| Inspirational Page | H | 3hrs| 0hrs |
+| Main | H | 2hrs| 1.5hrs |
+| Section | H | 1hrs| 0.5hrs |
+| ImageType | M | 3hrs| 0hrs |
+| ImageType | M | 3hrs| 0hrs |
+| JokeType | M | 3hrs| 0hrs |
+| SoundEffect | L | 2hrs| 0hrs |
+| Share | L | 2hrs| 0hrs |
+| Total | -- | 35hrs| 12hrs |
 
 ## Additional Libraries
  Axios - for the api call
