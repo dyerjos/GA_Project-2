@@ -58,7 +58,7 @@ Namefake API: https://randomuser.me/api/?gender=male&nat=us
 
 ## React Component Hierarchy
 
-![component hierarchy](https://res.cloudinary.com/dldktffdd/image/upload/v1566589248/proj%202/project%20worksheet/wireframing/Image_from_iOS_4_axlvc7.jpg)
+![component hierarchy](https://res.cloudinary.com/dldktffdd/image/upload/v1566914187/proj%202/project%20worksheet/wireframing/Image_from_iOS_4_trd2rt.jpg)
 
 ## Components
 
