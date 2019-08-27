@@ -14,7 +14,9 @@ function Card(props) {
     fontSize: '20px',
     top: '2%',
     marginTop: '-20px',
-    marginRight: '-20px',
+    marginRight: '25px',
+    marginLeft: '25px',
+    marginBottom: '20px',
     left: '10%',
     right: '10%',
 
@@ -44,7 +46,7 @@ function Card(props) {
         <div className="top-text" style={textStyles}>
         <h2>{props.joke1}</h2>
         <h2>{props.joke2}</h2>
-        <h3 style={nameStyles}>- {props.name1}{props.name2} the goat</h3>
+      <h3 style={nameStyles}>- {props.name1}{props.name2} the dad goat</h3>
         </div>
       </div>
     </div>

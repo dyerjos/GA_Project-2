@@ -10,11 +10,11 @@ class App extends Component {
     super(props);
     this.state = {
       joke1: '',
-      joke2: '',
+      // joke2: '',
       id1: '',
-      id2: '',
+      // id2: '',
       name1: '',
-      name2: ''
+      // name2: ''
     }
   }
 
@@ -33,19 +33,19 @@ class App extends Component {
     ))
   }
 
-  getDadJoke2 = async () => {
-    fetch('https://icanhazdadjoke.com/', {
-      headers: {
-        'Accept': 'application/json'
-      }
-      })
-      .then(res => res.json())
-      .then(data => this.setState(prevState => ({
-      joke2: data.joke,
-      id2: data.id
-      })
-    ))
-  }
+  // getDadJoke2 = async () => {
+  //   fetch('https://icanhazdadjoke.com/', {
+  //     headers: {
+  //       'Accept': 'application/json'
+  //     }
+  //     })
+  //     .then(res => res.json())
+  //     .then(data => this.setState(prevState => ({
+  //     joke2: data.joke,
+  //     id2: data.id
+  //     })
+  //   ))
+  // }
 
   getName1 = async () => {
     let url = 'https://randomuser.me/api/?gender=male&nat=us'
@@ -57,29 +57,30 @@ class App extends Component {
     )
   }
 
-  getName2 = async () => {
-    let url = 'https://randomuser.me/api/?gender=male&nat=us'
-    let data  = await axios(url)
-    this.setState(prevState => ({
-      name2: data.data.results[0].name.first
-      })
-    )
-  }
+  // getName2 = async () => {
+  //   let url = 'https://randomuser.me/api/?gender=male&nat=us'
+  //   let data  = await axios(url)
+  //   this.setState(prevState => ({
+  //     name2: data.data.results[0].name.first
+  //     })
+  //   )
+  // }
 
 
   componentDidMount() {
     this.getDadJoke1()
-    this.getDadJoke2()
+    // this.getDadJoke2()
     this.getName1()
-    this.getName2()
+    // this.getName2()
   }
 
   render() {
-    console.log('this is name1 in app', this.state.name1)
-
     let allStyles = {
       backgroundColor: 'CadetBlue',
-      color: 'white'
+      color: 'white',
+      width: '100%',
+      height: '100%',
+      minHeight: '100vh'
     }
 
     return (
@@ -92,9 +93,9 @@ class App extends Component {
           joke1= {this.state.joke1}
           id1= {this.state.id1}
           name1= {this.state.name1}
-          joke2= {this.state.joke2}
-          id2= {this.state.id2}
-          name2= {this.state.name2}
+          // joke2= {this.state.joke2}
+          // id2= {this.state.id2}
+          // name2= {this.state.name2}
         />
         <Footer />
       </div>

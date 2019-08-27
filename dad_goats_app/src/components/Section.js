@@ -3,6 +3,13 @@ import Card from './Card'
 
 function Section(props) {
 
+  let buttonStyles = {
+    position: 'relative',
+    textAlign: 'center',
+    width: '50%',
+    fontSize: '20px',
+  }
+
   return (
     <div>
       <Card
@@ -10,11 +17,13 @@ function Section(props) {
         id1= {props.id1}
         name1= {props.name1}
       />
-      <Card
+      {/* <Card
         joke2= {props.joke2}
         id2= {props.id2}
         name2= {props.name2}
-      />
+      /> */}
+      <button type="button" style={buttonStyles}>Make Dad Goat</button>
+    <button type="button" style={buttonStyles}>Send to Favorites</button>
     </div>
   );
 }
