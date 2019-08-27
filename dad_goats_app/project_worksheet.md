@@ -71,37 +71,37 @@ Namefake API: https://uinames.com/api/?gender=male
 | About Page | This will render the about page |
 | Jokes Page | This will render Jokes page |
 | Card | This will render the randomly generated cards |
-| Image | This will render the animal image |
-| Quotes | This will render the joke or quote text for the card |
-| Name | This will render the random male name for the card |
+| Image (Not Needed?)| This will render the animal image |
+| Quotes (Not Needed?)| This will render the joke or quote text for the card |
+| Name (Not Needed?)| This will render the random male name for the card |
 | Inspiration Page | This will render the main landing page that will then route all other pages |
 | Main | This will render the header include the nav |
 | Section | This will render sections of a page |
 
 
-| Component | Priority | Estimated Time | Actual Time |
+| Component | Priority | Estimated Time | Time so far |
 | --- | :---: |  :---: | :---: |
 | Design | H | 8hrs| 8hrs |
 | Startup Code | H | 3hrs| 3hrs |
-| App | H | 3hrs| #hrs |
-| Header | H | 2hrs| #hrs |
-| Footer | H | 1hrs| #hrs |
-| Favorites Page | H | 4hrs| #hrs |
-| About Page | H | 2hrs| #hrs |
-| Jokes Page | H | 6hrs| #hrs |
-| Card | H | 4hrs| #hrs |
-| Image | H | 2hrs| #hrs |
-| Quotes | H | 2hrs| #hrs |
-| Name | H | 1hrs| #hrs |
-| Inspirational Page | H | 3hrs| #hrs |
-| Main | H | 2hrs| #hrs |
-| Section | H | 1hrs| #hrs |
-| ImageType | M | 3hrs| #hrs |
-| ImageType | M | 3hrs| #hrs |
-| JokeType | M | 3hrs| #hrs |
-| SoundEffect | L | 2hrs| #hrs |
-| Share | L | 2hrs| #hrs |
-| Total | -- | 35hrs| #hrs |
+| App | H | 3hrs| 3.5hrs |
+| Header | H | 2hrs| 0.25hrs |
+| Footer | H | 1hrs| 0hrs |
+| Favorites Page | H | 4hrs| 0hrs |
+| About Page | H | 2hrs| 0hrs |
+| Jokes Page | H | 6hrs| 0.5hrs |
+| Card | H | 4hrs| 2.75hrs |
+| Image (Not Needed?)| H | 2hrs| 0hrs |
+| Quotes (Not Needed?)| H | 2hrs| 0hrs |
+| Name (Not Needed?)| H | 1hrs| 0hrs |
+| Inspirational Page | H | 3hrs| 0hrs |
+| Main | H | 2hrs| 1.5hrs |
+| Section | H | 1hrs| 0.5hrs |
+| ImageType | M | 3hrs| 0hrs |
+| ImageType | M | 3hrs| 0hrs |
+| JokeType | M | 3hrs| 0hrs |
+| SoundEffect | L | 2hrs| 0hrs |
+| Share | L | 2hrs| 0hrs |
+| Total | -- | 35hrs| 12hrs |
 
 ## Additional Libraries
  Axios - for the api call
