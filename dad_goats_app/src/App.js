@@ -19,6 +19,18 @@ class App extends Component {
   }
 
 
+
+  addToFavorites = () => {
+    console.log('this is added to Favorites!')
+  }
+
+  makeDadGoat = () => {
+    this.getDadJoke1()
+    // this.getDadJoke2()
+    this.getName1()
+    // this.getName2()
+  }
+
   getDadJoke1 = async () => {
     fetch('https://icanhazdadjoke.com/', {
       headers: {
@@ -83,6 +95,13 @@ class App extends Component {
       minHeight: '100vh'
     }
 
+    let buttonStyles = {
+      position: 'relative',
+      textAlign: 'center',
+      width: '50%',
+      fontSize: '20px',
+    }
+
     return (
       <div
         style={allStyles}
@@ -97,6 +116,18 @@ class App extends Component {
           // id2= {this.state.id2}
           // name2= {this.state.name2}
         />
+        <button
+          type="button"
+          style={buttonStyles}
+          onClick={this.makeDadGoat}
+          >Make Dad Goat
+        </button>
+        <button
+        type="button"
+        style={buttonStyles}
+        onClick={this.addToFavorites}
+        >Send to Favorites
+        </button>
         <Footer />
       </div>
     );
