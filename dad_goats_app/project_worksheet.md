@@ -24,10 +24,10 @@ Whiteboarding
 Current API's being used
 
 icanhazdadjoke API: https://icanhazdadjoke.com/api
-![dad jokes](https://res.cloudinary.com/dldktffdd/image/upload/v1566584374/proj%202/project%20worksheet/api%20screenshots/Screen_Shot_2019-08-23_at_2.18.56_PM_kgd2i3.png)
+![dad jokes](https://res.cloudinary.com/dldktffdd/image/upload/v1566913736/proj%202/project%20worksheet/api%20screenshots/Screen_Shot_2019-08-27_at_9.47.43_AM_xh1ozi.png)
 
-Namefake API: https://uinames.com/api/?gender=male
-![random male names](https://res.cloudinary.com/dldktffdd/image/upload/v1566584878/proj%202/project%20worksheet/api%20screenshots/Screen_Shot_2019-08-23_at_2.27.23_PM_tbjizd.png)
+Namefake API: https://randomuser.me/api/?gender=male&nat=us
+![random male names](https://res.cloudinary.com/dldktffdd/image/upload/v1566913731/proj%202/project%20worksheet/api%20screenshots/Screen_Shot_2019-08-27_at_9.39.45_AM_zpqpvl.png)
 
 
 ### MVP/PostMVP
