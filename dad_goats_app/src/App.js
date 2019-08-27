@@ -4,9 +4,6 @@ import Main from './components/Main'
 import Header from './components/Header'
 import Footer from './components/Footer'
 
-const headers = {
-  'Accept': 'application/json'
-}
 
 class App extends Component {
   constructor(props) {
@@ -51,34 +48,24 @@ class App extends Component {
   }
 
   getName1 = async () => {
-    fetch('https://uinames.com/api/?gender=male&region=United%20states', {
+    let url = 'https://randomuser.me/api/?gender=male&nat=us'
+    let data  = await axios(url)
+    console.log('this is data for random name', data);
+    this.setState(prevState => ({
+      name1: data.data.results[0].name.first
       })
-      .then(res => res.json())
-      .then(data => this.setState(prevState => ({
-      name1: data.name
-      })
-    ))
+    )
   }
 
   getName2 = async () => {
-    fetch('https://uinames.com/api/?gender=male&region=United%20states', {
+    let url = 'https://randomuser.me/api/?gender=male&nat=us'
+    let data  = await axios(url)
+    this.setState(prevState => ({
+      name2: data.data.results[0].name.first
       })
-      .then(res => res.json())
-      .then(data => this.setState(prevState => ({
-      name2: data.name
-      })
-    ))
+    )
   }
 
-  // getAllGoats = async () => {
-  //   fetch('https://placegoat.com', {
-  //     })
-  //     .then(data => this.setState(prevState => ({
-  //     goats: data.goat
-  //     })
-  //   ))
-  //
-  // }
 
   componentDidMount() {
     this.getDadJoke1()
@@ -87,14 +74,19 @@ class App extends Component {
     this.getName2()
   }
 
-
   render() {
-    console.log('this is the jokes state in app.js', this.state.jokes)
     console.log('this is name1 in app', this.state.name1)
 
+    let allStyles = {
+      backgroundColor: 'CadetBlue',
+      color: 'white'
+    }
+
     return (
-      <div className="App">
-        <h1>Dad Goats</h1>
+      <div
+        style={allStyles}
+        className="App">
+        <h1 >Dad Goats</h1>
         <Header />
         <Main
           joke1= {this.state.joke1}

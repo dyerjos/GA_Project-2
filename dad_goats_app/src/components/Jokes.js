@@ -3,10 +3,9 @@ import { Route } from 'react-router-dom'
 import Section from './Section'
 
 function Jokes(props) {
-console.log('this is jokes in jokes.js', props)
   return (
     <div>
-      <h1>I am Jokes</h1>
+      <h1>Jokes Page</h1>
       <Section
         joke1= {props.joke1}
         id1= {props.id1}

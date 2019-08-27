@@ -7,15 +7,17 @@ import { Link } from 'react-router-dom'
 function Header() {
 
   let navStyles = {
-
+    display: 'flex'
   }
 
   let ulStyles = {
+    display: 'flex',
+    'listStyle': 'none',
 
   }
 
   let aStyles = {
-
+    padding: '30px'
   }
 
   return (
