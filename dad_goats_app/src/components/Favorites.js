@@ -1,11 +1,18 @@
 import React from 'react';
 import { Route } from 'react-router-dom'
+import Card from './Card'
 
-function Favorites() {
+function Favorites(props) {
+console.log('this is Favorites props', props)
 
   return (
     <div>
-      <h1>I am Favorites</h1>
+      <Card
+        favorites= {props.favorites}
+        nameFave= {props.nameFave}
+        jokeFave= {props.nameFave}
+
+      />
     </div>
   );
 }

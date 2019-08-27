@@ -3,6 +3,7 @@ import axios from 'axios';
 import Main from './components/Main'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import Card from './components/Card'
 
 
 class App extends Component {
@@ -15,6 +16,8 @@ class App extends Component {
       // id2: '',
       name1: '',
       // name2: ''
+      favoritesObj:{},
+      favorites:[]
     }
   }
 
@@ -22,7 +25,31 @@ class App extends Component {
 
   addToFavorites = () => {
     console.log('this is added to Favorites!')
-  }
+
+//       this.setState(prevState => {
+//         let favoritesObj = {...prevState.favoritesObj}
+//         favoritesObj.id = this.state.id1;
+//         favoritesObj.joke = this.state.joke1;
+//         favoritesObj.name = this.state.name1;
+//
+//
+//       const favoritesArr = this.state.favoritesArr.slice()
+//       favoritesArr.push(favoritesObj)
+//       console.log('this is fav arr', favoritesArr)
+//       return { favoritesObj }
+// })
+
+  let newObj = {}
+  newObj.id = this.state.id1;
+  newObj.name = this.state.name1;
+  newObj.joke = this.state.joke1;
+  let favoritesArr = this.state.favorites.slice()
+  favoritesArr.push(newObj)
+  console.log('this is fav arr', favoritesArr)
+  this.setState({
+    favorites:favoritesArr
+  })
+}
 
   makeDadGoat = () => {
     this.getDadJoke1()
@@ -62,7 +89,6 @@ class App extends Component {
   getName1 = async () => {
     let url = 'https://randomuser.me/api/?gender=male&nat=us'
     let data  = await axios(url)
-    console.log('this is data for random name', data);
     this.setState(prevState => ({
       name1: data.data.results[0].name.first
       })
@@ -87,6 +113,7 @@ class App extends Component {
   }
 
   render() {
+    // console.log(this.state.favorites)
     let allStyles = {
       backgroundColor: 'CadetBlue',
       color: 'white',
@@ -112,9 +139,7 @@ class App extends Component {
           joke1= {this.state.joke1}
           id1= {this.state.id1}
           name1= {this.state.name1}
-          // joke2= {this.state.joke2}
-          // id2= {this.state.id2}
-          // name2= {this.state.name2}
+          favorites = {this.state.favorites}
         />
         <button
           type="button"

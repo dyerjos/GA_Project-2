@@ -8,6 +8,7 @@ import Home from './Home'
 
 
 function Main(props) {
+  // console.log('this is main props', props)
   return (
 
     <main>
@@ -20,7 +21,12 @@ function Main(props) {
         />
         <Route path='/Inspiration' component={Inspiration} />
         <Route path='/About' component={About} />
-        <Route path='/Favorites' component={Favorites} />
+        <Route path='/Favorites'
+        render={() =>
+          <Favorites favorites={props.favorites}
+          />}
+
+      />
       </Switch>
     </main>
   );
