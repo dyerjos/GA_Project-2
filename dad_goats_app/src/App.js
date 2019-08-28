@@ -17,32 +17,19 @@ class App extends Component {
       name1: '',
       // name2: ''
       favoritesObj:{},
-      favorites:[]
+      favorites:[],
+      quote: ''
     }
   }
 
 
 
   addToFavorites = () => {
-    console.log('this is added to Favorites!')
-
-//       this.setState(prevState => {
-//         let favoritesObj = {...prevState.favoritesObj}
-//         favoritesObj.id = this.state.id1;
-//         favoritesObj.joke = this.state.joke1;
-//         favoritesObj.name = this.state.name1;
-//
-//
-//       const favoritesArr = this.state.favoritesArr.slice()
-//       favoritesArr.push(favoritesObj)
-//       console.log('this is fav arr', favoritesArr)
-//       return { favoritesObj }
-// })
-
   let newObj = {}
   newObj.id = this.state.id1;
   newObj.name = this.state.name1;
   newObj.joke = this.state.joke1;
+  newObj.quote = this.state.quote;
   let favoritesArr = this.state.favorites.slice()
   favoritesArr.push(newObj)
   console.log('this is fav arr', favoritesArr)
@@ -56,6 +43,7 @@ class App extends Component {
     // this.getDadJoke2()
     this.getName1()
     // this.getName2()
+    this.getQuote()
   }
 
   getDadJoke1 = async () => {
@@ -95,6 +83,17 @@ class App extends Component {
     )
   }
 
+  getQuote = async () => {
+    let proxyUrl = 'https://cors-anywhere.herokuapp.com/'
+    let targetUrl = 'https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en'
+    let data  = await axios(proxyUrl + targetUrl)
+    console.log('this is quote data', data)
+    this.setState(prevState => ({
+      quote: data.data.quoteText
+      })
+    )
+  }
+
   // getName2 = async () => {
   //   let url = 'https://randomuser.me/api/?gender=male&nat=us'
   //   let data  = await axios(url)
@@ -110,6 +109,7 @@ class App extends Component {
     // this.getDadJoke2()
     this.getName1()
     // this.getName2()
+    this.getQuote()
   }
 
   render() {
@@ -140,6 +140,7 @@ class App extends Component {
           id1= {this.state.id1}
           name1= {this.state.name1}
           favorites = {this.state.favorites}
+          quote= {this.state.quote}
         />
         <button
           type="button"
