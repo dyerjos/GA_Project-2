@@ -13,6 +13,7 @@ class Favorites extends Component {
     }
 
   render () {
+
     console.log('this is favorites props')
   // this will create each card component for each fav
     const createFavoriteCards = this.props.favorites.map( (d,i) => {

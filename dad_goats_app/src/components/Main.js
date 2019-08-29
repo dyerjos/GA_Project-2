@@ -8,7 +8,6 @@ import Home from './Home'
 
 
 function Main(props) {
-  console.log('this is Main - props', props)
   return (
 
     <main>
@@ -16,8 +15,12 @@ function Main(props) {
         <Route exact path='/'
         render={() => <
           Home {...props}
-          />}
+          onclick1={() => props.onclick1()}
+          onclick2={() => props.onclick2()}
+          onclick3={() => props.onclick3()}
 
+
+          />}
       />
         <Route path='/Jokes'
         render={() => <

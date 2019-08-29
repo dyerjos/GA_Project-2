@@ -5,7 +5,6 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Card from './components/Card'
 
-
 class App extends Component {
   constructor(props) {
     super(props);
@@ -18,27 +17,17 @@ class App extends Component {
         text:'',
         name:''
       },
-      joke1: '',
-      name1: '',
       favoritesObj:{},
       favorites:[],
-      quote: ''
     }
   }
 
-
-
   addToFavorites = () => {
   let newObj = {}
-  // newObj.id = this.state.id1;
-  // newObj.name = this.state.name1;
-  // newObj.joke = this.state.joke1;
-  // newObj.quote = this.state.quote;
   newObj.name = this.state.standardText.name
   newObj.text = this.state.standardText.text
   let favoritesArr = this.state.favorites.slice()
   favoritesArr.push(newObj)
-  console.log('this is fav arr', favoritesArr)
   this.setState({
     favorites:favoritesArr
   })
@@ -53,8 +42,6 @@ class App extends Component {
     this.getName1()
     this.getQuote()
   }
-
-
 
   getDadJoke1 = async () => {
     fetch('https://icanhazdadjoke.com/', {
@@ -83,15 +70,12 @@ class App extends Component {
       standardText,
       })
     )
-
-
   }
 
   getQuote = async () => {
     let proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     let targetUrl = 'https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en'
     let data  = await axios(proxyUrl + targetUrl)
-    console.log('this is quote data', data)
     this.setState(prevState => ({
       standardText: {
         text: data.data.quoteText,
@@ -109,20 +93,12 @@ class App extends Component {
   // }
 
   render() {
-    console.log('this is state', this.state)
     let allStyles = {
       backgroundColor: 'CadetBlue',
       color: 'white',
       width: '100%',
       height: '100%',
       minHeight: '100vh'
-    }
-
-    let buttonStyles = {
-      position: 'relative',
-      textAlign: 'center',
-      width: '25%',
-      fontSize: '15px',
     }
 
     return (
@@ -138,25 +114,10 @@ class App extends Component {
           name1= {this.state.name1}
           favorites = {this.state.favorites}
           quote= {this.state.quote}
+          onclick1= {() => this.makeDadGoat()}
+          onclick2= {() => this.makeEnGoat()}
+          onclick3= {() => this.addToFavorites()}
         />
-        <button
-          type="button"
-          style={buttonStyles}
-          onClick={this.makeDadGoat}
-          >Make Dad Goat
-        </button>
-        <button
-        type="button"
-        style={buttonStyles}
-        onClick={this.addToFavorites}
-        >Send to Favorites
-        </button>
-        <button
-          type="button"
-          style={buttonStyles}
-          onClick={this.makeEnGoat}
-          >Make Enlightened Goat
-        </button>
         <Footer />
       </div>
     );

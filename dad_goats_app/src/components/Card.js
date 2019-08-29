@@ -1,7 +1,6 @@
 import React from 'react';
 
 function Card(props) {
-console.log('this is card props', props)
   let containerStyles = {
     position: 'relative',
     textAlign: 'center',
@@ -27,13 +26,15 @@ console.log('this is card props', props)
     fontSize: '20px',
     right: '10%',
     paddingRight: '15%',
-    marginTop: '-15px'
+    // marginTop: '-15px'
   }
 
   let imageStyles = {
+    display: 'flex',
+    display: 'column',
     border: '6px solid white',
     borderRadius: '20px',
-    width: '80%',
+    width: '70%',
     height: 'auto',
   }
 
