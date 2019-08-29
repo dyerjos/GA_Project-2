@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Card(props) {
-// console.log('this is card props', props)
+console.log('this is card props', props)
   let containerStyles = {
     position: 'relative',
     textAlign: 'center',

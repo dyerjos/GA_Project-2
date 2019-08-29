@@ -10,6 +10,14 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      standardInspiration: {
+        text:'',
+        name:''
+      },
+      standardText: {
+        text:'',
+        name:''
+      },
       joke1: '',
       // joke2: '',
       id1: '',
@@ -54,6 +62,10 @@ class App extends Component {
       })
       .then(res => res.json())
       .then(data => this.setState(prevState => ({
+      standardText: {
+        text: data.joke,
+        name: ''
+      },
       joke1: data.joke,
       id1: data.id
       })
@@ -77,10 +89,15 @@ class App extends Component {
   getName1 = async () => {
     let url = 'https://randomuser.me/api/?gender=male&nat=us'
     let data  = await axios(url)
+    let standardText = {...this.state.standardText}
+    standardText.name = data.data.results[0].name.first
     this.setState(prevState => ({
-      name1: data.data.results[0].name.first
+      name1: data.data.results[0].name.first,
+      standardText,
       })
     )
+
+
   }
 
   getQuote = async () => {
@@ -136,6 +153,7 @@ class App extends Component {
         <h1 >Dad Goats</h1>
         <Header />
         <Main
+          standardText={this.state.standardText}
           joke1= {this.state.joke1}
           id1= {this.state.id1}
           name1= {this.state.name1}

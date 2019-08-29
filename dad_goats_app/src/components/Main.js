@@ -8,6 +8,7 @@ import Home from './Home'
 
 
 function Main(props) {
+  console.log('this is Main - props', props)
   return (
 
     <main>
