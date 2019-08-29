@@ -5,17 +5,14 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import Card from './components/Card'
 
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      standardInspiration: {
-        text:'',
-        name:''
-      },
       standardText: {
         text:'',
-        name:''
+        name:'',
+        goatImg: ''
       },
       favoritesObj:{},
       favorites:[],
@@ -26,6 +23,7 @@ class App extends Component {
   let newObj = {}
   newObj.name = this.state.standardText.name
   newObj.text = this.state.standardText.text
+  newObj.goat = this.state.standardText.goat
   let favoritesArr = this.state.favorites.slice()
   favoritesArr.push(newObj)
   this.setState({
@@ -35,12 +33,14 @@ class App extends Component {
 
   makeDadGoat = () => {
     this.getDadJoke1()
-    this.getName1()
+
+    // this.getGoat()
   }
 
   makeEnGoat = () => {
     this.getName1()
     this.getQuote()
+    this.getGoat()
   }
 
   getDadJoke1 = async () => {
@@ -53,12 +53,28 @@ class App extends Component {
       .then(data => this.setState(prevState => ({
       standardText: {
         text: data.joke,
-        name: ''
+        name: '',
+        goatImg: ''
       },
-      joke1: data.joke,
       })
     ))
+    this.getName1()
   }
+
+  getGoat = () => {
+    let goats = this.props.goats
+    let randomNum = Math.floor((Math.random() * goats.length))
+    let goat = goats[randomNum]
+    let standardText = {...this.state.standardText}
+    // standardText.goat = goat
+
+    this.setState(prevState => ({
+      goat:goat,
+      standardText,
+      })
+    )
+  }
+
 
   getName1 = async () => {
     let url = 'https://randomuser.me/api/?gender=male&nat=us'
@@ -66,7 +82,7 @@ class App extends Component {
     let standardText = {...this.state.standardText}
     standardText.name = data.data.results[0].name.first
     this.setState(prevState => ({
-      name1: data.data.results[0].name.first,
+      name: data.data.results[0].name.first,
       standardText,
       })
     )
@@ -79,18 +95,12 @@ class App extends Component {
     this.setState(prevState => ({
       standardText: {
         text: data.data.quoteText,
-        name: ''
+        // name: '',
+        // goat: ''
       },
-      quote: data.data.quoteText
       })
     )
   }
-
-  // componentDidMount() {
-  //   this.getDadJoke1()
-  //   this.getName1()
-  //   this.getQuote()
-  // }
 
   render() {
     let allStyles = {
@@ -100,23 +110,19 @@ class App extends Component {
       height: '100%',
       minHeight: '100vh'
     }
-
+  console.log(this.state)
     return (
       <div
         style={allStyles}
         className="App">
-        <h1 >Dad Goats</h1>
+        <h1>Dad Goats</h1>
         <Header />
         <Main
           standardText={this.state.standardText}
-          joke1= {this.state.joke1}
-          id1= {this.state.id1}
-          name1= {this.state.name1}
           favorites = {this.state.favorites}
-          quote= {this.state.quote}
-          onclick1= {() => this.makeDadGoat()}
-          onclick2= {() => this.makeEnGoat()}
-          onclick3= {() => this.addToFavorites()}
+          onclick1= {this.makeDadGoat}
+          onclick2= {this.makeEnGoat}
+          onclick3= {this.addToFavorites}
         />
         <Footer />
       </div>
