@@ -13,7 +13,12 @@ function Main(props) {
 
     <main>
       <Switch>
-        <Route exact path='/' component={Home} />
+        <Route exact path='/'
+        render={() => <
+          Home {...props}
+          />}
+
+      />
         <Route path='/Jokes'
         render={() => <
           Jokes {...props}
@@ -21,9 +26,7 @@ function Main(props) {
         />
         <Route path='/Inspiration'
         render={() => <
-          Inspiration
-          quote={props.quote}
-          name1= {props.name1}
+          Inspiration {...props}
           />}
       />
         <Route path='/About' component={About} />
@@ -31,7 +34,6 @@ function Main(props) {
         render={() => <
           Favorites favorites={props.favorites}
           />}
-
       />
       </Switch>
     </main>

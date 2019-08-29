@@ -19,11 +19,7 @@ class App extends Component {
         name:''
       },
       joke1: '',
-      // joke2: '',
-      id1: '',
-      // id2: '',
       name1: '',
-      // name2: ''
       favoritesObj:{},
       favorites:[],
       quote: ''
@@ -34,10 +30,12 @@ class App extends Component {
 
   addToFavorites = () => {
   let newObj = {}
-  newObj.id = this.state.id1;
-  newObj.name = this.state.name1;
-  newObj.joke = this.state.joke1;
-  newObj.quote = this.state.quote;
+  // newObj.id = this.state.id1;
+  // newObj.name = this.state.name1;
+  // newObj.joke = this.state.joke1;
+  // newObj.quote = this.state.quote;
+  newObj.name = this.state.standardText.name
+  newObj.text = this.state.standardText.text
   let favoritesArr = this.state.favorites.slice()
   favoritesArr.push(newObj)
   console.log('this is fav arr', favoritesArr)
@@ -48,11 +46,15 @@ class App extends Component {
 
   makeDadGoat = () => {
     this.getDadJoke1()
-    // this.getDadJoke2()
     this.getName1()
-    // this.getName2()
+  }
+
+  makeEnGoat = () => {
+    this.getName1()
     this.getQuote()
   }
+
+
 
   getDadJoke1 = async () => {
     fetch('https://icanhazdadjoke.com/', {
@@ -67,24 +69,9 @@ class App extends Component {
         name: ''
       },
       joke1: data.joke,
-      id1: data.id
       })
     ))
   }
-
-  // getDadJoke2 = async () => {
-  //   fetch('https://icanhazdadjoke.com/', {
-  //     headers: {
-  //       'Accept': 'application/json'
-  //     }
-  //     })
-  //     .then(res => res.json())
-  //     .then(data => this.setState(prevState => ({
-  //     joke2: data.joke,
-  //     id2: data.id
-  //     })
-  //   ))
-  // }
 
   getName1 = async () => {
     let url = 'https://randomuser.me/api/?gender=male&nat=us'
@@ -106,31 +93,23 @@ class App extends Component {
     let data  = await axios(proxyUrl + targetUrl)
     console.log('this is quote data', data)
     this.setState(prevState => ({
+      standardText: {
+        text: data.data.quoteText,
+        name: ''
+      },
       quote: data.data.quoteText
       })
     )
   }
 
-  // getName2 = async () => {
-  //   let url = 'https://randomuser.me/api/?gender=male&nat=us'
-  //   let data  = await axios(url)
-  //   this.setState(prevState => ({
-  //     name2: data.data.results[0].name.first
-  //     })
-  //   )
+  // componentDidMount() {
+  //   this.getDadJoke1()
+  //   this.getName1()
+  //   this.getQuote()
   // }
 
-
-  componentDidMount() {
-    this.getDadJoke1()
-    // this.getDadJoke2()
-    this.getName1()
-    // this.getName2()
-    this.getQuote()
-  }
-
   render() {
-    // console.log(this.state.favorites)
+    console.log('this is state', this.state)
     let allStyles = {
       backgroundColor: 'CadetBlue',
       color: 'white',
@@ -142,8 +121,8 @@ class App extends Component {
     let buttonStyles = {
       position: 'relative',
       textAlign: 'center',
-      width: '50%',
-      fontSize: '20px',
+      width: '25%',
+      fontSize: '15px',
     }
 
     return (
@@ -171,6 +150,12 @@ class App extends Component {
         style={buttonStyles}
         onClick={this.addToFavorites}
         >Send to Favorites
+        </button>
+        <button
+          type="button"
+          style={buttonStyles}
+          onClick={this.makeEnGoat}
+          >Make Enlightened Goat
         </button>
         <Footer />
       </div>

@@ -7,18 +7,19 @@ class Favorites extends Component {
   constructor(props) {
       super(props);
       this.state = {
-        jokeFave: '',
+        textFave: '',
         nameFave: ''
       }
     }
 
   render () {
+    console.log('this is favorites props')
   // this will create each card component for each fav
     const createFavoriteCards = this.props.favorites.map( (d,i) => {
       return (
         <Card
-          jokeFave={d.joke}
-          nameFave={d.name}
+          text={d.text}
+          name={d.name}
           key={i}
         />
       )
@@ -29,16 +30,3 @@ class Favorites extends Component {
 }
 
 export default Favorites;
-// function Favorites(props) {
-// console.log('this is Favorites props', props)
-//
-//   return (
-//     <div>
-//       <Card
-//         favorites= {props.favorites}
-//       />
-//     </div>
-//   );
-// }
-
-// export default Favorites;
