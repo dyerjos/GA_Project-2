@@ -36,7 +36,6 @@ class App extends Component {
   this.setState({
     favorites:favoritesArr
   })
-  console.log('remove from favorites here')
 }
 
   makeDadGoat = () => {
