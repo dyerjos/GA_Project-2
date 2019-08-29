@@ -21,6 +21,7 @@ class Favorites extends Component {
         <Card
           text={d.text}
           name={d.name}
+          goat={d.goat}
           key={i}
         />
       )

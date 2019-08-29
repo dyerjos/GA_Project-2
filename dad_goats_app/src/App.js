@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React from 'react';
 import Main from './components/Main'
 import Header from './components/Header'
 import Footer from './components/Footer'
@@ -9,10 +8,11 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+
       standardText: {
         text:'',
         name:'',
-        goatImg: ''
+        goat: "https://media.wnyc.org/i/800/0/l/85/1/blackbox.jpeg"
       },
       favoritesObj:{},
       favorites:[],
@@ -38,9 +38,9 @@ class App extends React.Component {
   }
 
   makeEnGoat = () => {
-    this.getName1()
+    // this.getName1()
     this.getQuote()
-    this.getGoat()
+    // this.getGoat()
   }
 
   getDadJoke1 = async () => {
@@ -50,57 +50,56 @@ class App extends React.Component {
       }
       })
       .then(res => res.json())
-      .then(data => this.setState(prevState => ({
-      standardText: {
-        text: data.joke,
-        name: '',
-        goatImg: ''
-      },
-      })
-    ))
-    this.getName1()
+      .then(data => this.setState(prevState => {
+        let standardText = { ...prevState.standardText };
+        standardText.text = data.joke;
+        return { standardText };
+      }))
+      .then(()=> this.getName1())
+  }
+
+  getName1 = async (d) => {
+    console.log(d)
+    let url = 'https://randomuser.me/api/?gender=male&nat=us'
+    fetch(url)
+      .then(res => res.json())
+      .then(data => this.setState(prevState => {
+        console.log(data.results[0].name.first)
+        let standardText = { ...prevState.standardText };
+        standardText.name = data.results[0].name.first;
+        return { standardText };
+      }))
+      .then(()=> this.getGoat())
+
   }
 
   getGoat = () => {
+    console.log('inside goat')
     let goats = this.props.goats
     let randomNum = Math.floor((Math.random() * goats.length))
     let goat = goats[randomNum]
-    let standardText = {...this.state.standardText}
-    // standardText.goat = goat
-
-    this.setState(prevState => ({
-      goat:goat,
-      standardText,
-      })
-    )
+    this.setState(prevState => {
+      let standardText = { ...prevState.standardText };
+      standardText.goat = goat;
+      return { standardText };
+    })
   }
 
 
-  getName1 = async () => {
-    let url = 'https://randomuser.me/api/?gender=male&nat=us'
-    let data  = await axios(url)
-    let standardText = {...this.state.standardText}
-    standardText.name = data.data.results[0].name.first
-    this.setState(prevState => ({
-      name: data.data.results[0].name.first,
-      standardText,
-      })
-    )
-  }
+
 
   getQuote = async () => {
     let proxyUrl = 'https://cors-anywhere.herokuapp.com/'
     let targetUrl = 'https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en'
-    let data  = await axios(proxyUrl + targetUrl)
-    this.setState(prevState => ({
-      standardText: {
-        text: data.data.quoteText,
-        // name: '',
-        // goat: ''
-      },
-      })
-    )
-  }
+    fetch (proxyUrl + targetUrl)
+    .then(res => res.json())
+    .then(data => this.setState(prevState => {
+      let standardText = { ...prevState.standardText };
+      standardText.text = data.quoteText;
+      return { standardText };
+    }))
+    .then(()=> this.getName1())
+}
 
   render() {
     let allStyles = {
@@ -110,12 +109,15 @@ class App extends React.Component {
       height: '100%',
       minHeight: '100vh'
     }
+    let h1Styles = {
+      textAlign: 'center',
+    }
   console.log(this.state)
     return (
       <div
         style={allStyles}
         className="App">
-        <h1>Dad Goats</h1>
+        <h1 style={h1Styles}>Dad Goats</h1>
         <Header />
         <Main
           standardText={this.state.standardText}
