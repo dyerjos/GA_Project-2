@@ -2,9 +2,14 @@ import React from 'react';
 
 function Card(props) {
   let containerStyles = {
+    display: 'flex',
     position: 'relative',
     textAlign: 'center',
-    color: 'white'
+    color: 'white',
+    maxWidth: '900px',
+    justifyContent: 'center',
+    margin: '0 auto',
+    marginBottom: '20px'
   }
 
   let textStyles = {
