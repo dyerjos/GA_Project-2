@@ -16,8 +16,8 @@ function Card(props) {
     marginRight: '25px',
     marginLeft: '25px',
     marginBottom: '20px',
-    left: '10%',
-    right: '10%',
+    left: '15%',
+    right: '15%',
 
   }
 
@@ -37,7 +37,6 @@ function Card(props) {
     width: '70%',
     height: 'auto',
   }
-console.log('this is props in card', props)
 
   return (
     <div>

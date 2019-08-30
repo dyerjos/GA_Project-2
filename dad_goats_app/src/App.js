@@ -12,7 +12,7 @@ class App extends React.Component {
       standardText: {
         text:'',
         name:'',
-        goat: "https://media.wnyc.org/i/800/0/l/85/1/blackbox.jpeg"
+        goat: ''
       },
       favoritesObj:{},
       favorites:[],
@@ -59,12 +59,10 @@ class App extends React.Component {
   }
 
   getName1 = async (d) => {
-    console.log(d)
     let url = 'https://randomuser.me/api/?gender=male&nat=us'
     fetch(url)
       .then(res => res.json())
       .then(data => this.setState(prevState => {
-        console.log(data.results[0].name.first)
         let standardText = { ...prevState.standardText };
         standardText.name = data.results[0].name.first;
         return { standardText };
@@ -74,7 +72,6 @@ class App extends React.Component {
   }
 
   getGoat = () => {
-    console.log('inside goat')
     let goats = this.props.goats
     let randomNum = Math.floor((Math.random() * goats.length))
     let goat = goats[randomNum]
@@ -101,6 +98,10 @@ class App extends React.Component {
     .then(()=> this.getName1())
 }
 
+componentDidMount() {
+    this.getDadJoke1()
+  }
+
   render() {
     let allStyles = {
       backgroundColor: 'CadetBlue',
@@ -112,7 +113,6 @@ class App extends React.Component {
     let h1Styles = {
       textAlign: 'center',
     }
-  console.log(this.state)
     return (
       <div
         style={allStyles}
