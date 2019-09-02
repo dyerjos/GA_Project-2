@@ -4,7 +4,7 @@
 
 ## Project Description
 
-This app generate random cards. Each card will have a random image of a goat, a random dad joke, and a random male name assigned to each goat. It will have a means to favorite goats and possibly will have a feature to download the generated cards as jpeg files, time permitting. The purpose of this app is to help people have a good laugh.
+This app generate random cards. Each card will have a random image of a goat, a random dad joke, and a random male name assigned to each goat. It will have a means to favorite goats. The purpose of this app is to help people have a good laugh.
 
 ## Wireframes
 
@@ -29,18 +29,16 @@ icanhazdadjoke API: https://icanhazdadjoke.com/api
 Namefake API: https://randomuser.me/api/?gender=male&nat=us
 ![random male names](https://res.cloudinary.com/dldktffdd/image/upload/v1566913731/proj%202/project%20worksheet/api%20screenshots/Screen_Shot_2019-08-27_at_9.39.45_AM_zpqpvl.png)
 
+Forismatic API: https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en
+![inspirational quotes](https://res.cloudinary.com/dldktffdd/image/upload/v1567427978/proj%202/project%20worksheet/api%20screenshots/Screen_Shot_2019-09-02_at_8.39.28_AM_czzthc.png)
 
 ### MVP/PostMVP
 
 #### MVP
 
-- Have a Jokes page that generates cards pairing goats with jokes
-
-- Have an Inspiration page that generates cards pairing goats with inspirational quotes
+- Have a Home page that can generate cards pairing goats with jokes or inspirational quotes
 
 - Have an About page that will introduce myself
-
-- Have a Home page that will introduce the app
 
 - Have a Favorites page that will hold a user's favorited cards
 
@@ -83,19 +81,14 @@ Namefake API: https://randomuser.me/api/?gender=male&nat=us
 | --- | :---: |  :---: | :---: |
 | Design | H | 8hrs| 8hrs |
 | Startup Code | H | 3hrs| 3hrs |
-| App | H | 3hrs| 3.5hrs |
-| Header | H | 2hrs| 0.25hrs |
-| Footer | H | 1hrs| 0hrs |
-| Favorites Page | H | 4hrs| 0hrs |
-| About Page | H | 2hrs| 0hrs |
-| Jokes Page | H | 6hrs| 0.5hrs |
-| Card | H | 4hrs| 2.75hrs |
-| Image (Not Needed?)| H | 2hrs| 0hrs |
-| Quotes (Not Needed?)| H | 2hrs| 0hrs |
-| Name (Not Needed?)| H | 1hrs| 0hrs |
-| Inspirational Page | H | 3hrs| 0hrs |
-| Main | H | 2hrs| 1.5hrs |
-| Section | H | 1hrs| 0.5hrs |
+| App | H | 3hrs| 13hrs |
+| Header | H | 2hrs| 0.5hrs |
+| Footer | H | 1hrs| 0.1hrs |
+| Favorites Page | H | 4hrs| 4hrs |
+| About Page | H | 2hrs| 1hrs |
+| Card | H | 4hrs| 4hrs |
+| Main | H | 2hrs| 2hrs |
+| Section | H | 1hrs| 1hrs |
 | ImageType | M | 3hrs| 0hrs |
 | ImageType | M | 3hrs| 0hrs |
 | JokeType | M | 3hrs| 0hrs |
@@ -104,7 +97,7 @@ Namefake API: https://randomuser.me/api/?gender=male&nat=us
 | Total | -- | 35hrs| 12hrs |
 
 ## Additional Libraries
- Axios - for the api call
+ N/A
 
 ## Code Snippet
 
@@ -119,6 +112,18 @@ function reverse(string) {
 ## Issues and Resolutions
  Use this section to list of all major issues encountered and their resolution.
 
-#### SAMPLE.....
-**ERROR**: app.js:34 Uncaught SyntaxError: Unexpected identifier                                
-**RESOLUTION**: Missing comma after first object in sources {} object
+**ERROR**: Tried to convert fetch api call to axios but couldn't figure out a solution to use axios with a header:           
+**RESOLUTION**: https://github.com/axios/axios
+https://stackoverflow.com/questions/44617825/passing-headers-with-axios-post-request
+
+**ERROR**: Had to figure out how to overlay text onto an image. This url was referenced:                               
+**RESOLUTION**: https://www.w3schools.com/howto/howto_css_image_text.asp
+
+**ERROR**: Had trouble using two parameters in api url. also United States was a two word region for name api.               
+**RESOLUTION**: found out by trial and error that i can type united%20States in url     
+
+**ERROR**: Had trouble using forismatic api for inspirational quotes. This post helped me:                             
+**RESOLUTION**: https://stackoverflow.com/questions/43262121/trying-to-use-fetch-and-pass-in-mode-no-cors
+
+**ERROR**: Had trouble with keeping data in State with multiple api calls                            
+**RESOLUTION**: https://stackoverflow.com/questions/43638938/updating-an-object-with-setstate-in-react 
