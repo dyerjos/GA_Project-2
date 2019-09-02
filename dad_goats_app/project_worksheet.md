@@ -56,7 +56,7 @@ Forismatic API: https://api.forismatic.com/api/1.0/?method=getQuote&format=json&
 
 ## React Component Hierarchy
 
-![component hierarchy](https://res.cloudinary.com/dldktffdd/image/upload/v1566914187/proj%202/project%20worksheet/wireframing/Image_from_iOS_4_trd2rt.jpg)
+![component hierarchy](https://res.cloudinary.com/dldktffdd/image/upload/v1567429035/proj%202/project%20worksheet/wireframing/Image_from_iOS_4_trd2rt_plyf7a.jpg)
 
 ## Components
 
@@ -67,17 +67,12 @@ Forismatic API: https://api.forismatic.com/api/1.0/?method=getQuote&format=json&
 | Footer | This will render the footer |
 | Favorites Page | This will render the favorites page which includes favorited cards|
 | About Page | This will render the about page |
-| Jokes Page | This will render Jokes page |
+| Home Page | This will render jokes and inspirational quotes |
 | Card | This will render the randomly generated cards |
-| Image (Not Needed?)| This will render the animal image |
-| Quotes (Not Needed?)| This will render the joke or quote text for the card |
-| Name (Not Needed?)| This will render the random male name for the card |
-| Inspiration Page | This will render the main landing page that will then route all other pages |
 | Main | This will render the header include the nav |
-| Section | This will render sections of a page |
 
 
-| Component | Priority | Estimated Time | Time so far |
+| Component | Priority | Estimated Time | Actual Time |
 | --- | :---: |  :---: | :---: |
 | Design | H | 8hrs| 8hrs |
 | Startup Code | H | 3hrs| 3hrs |
@@ -90,11 +85,10 @@ Forismatic API: https://api.forismatic.com/api/1.0/?method=getQuote&format=json&
 | Main | H | 2hrs| 2hrs |
 | Section | H | 1hrs| 1hrs |
 | ImageType | M | 3hrs| 0hrs |
-| ImageType | M | 3hrs| 0hrs |
 | JokeType | M | 3hrs| 0hrs |
 | SoundEffect | L | 2hrs| 0hrs |
 | Share | L | 2hrs| 0hrs |
-| Total | -- | 35hrs| 12hrs |
+| Total | -- | 35hrs| 37hrs |
 
 ## Additional Libraries
  N/A
