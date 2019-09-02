@@ -95,13 +95,8 @@ Forismatic API: https://api.forismatic.com/api/1.0/?method=getQuote&format=json&
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description.  Code snippet should not be greater than 10 lines of code.
-
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
+I'm most proud of my code that renders each card. It required a lot of CSS as well to make text aquired from API pulls display properly on each generated card.
+![code snippet](https://res.cloudinary.com/dldktffdd/image/upload/v1567429658/proj%202/project%20worksheet/Screen_Shot_2019-09-02_at_9.07.12_AM_lswhli.png)
 
 ## Issues and Resolutions
  Use this section to list of all major issues encountered and their resolution.
